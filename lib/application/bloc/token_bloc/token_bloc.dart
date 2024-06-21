@@ -14,8 +14,6 @@ class TokenBloc extends Bloc<TokenEvent, TokenState> {
   // you call abstract to make things injectable never call the actual repository
   final AApiAuthRepository api;
 
-  // static const String _tokenKey = "token"; // Todo Move to envi
-
   TokenBloc({required this.api}) : super(const _Initial()) {
     on<TokenEvent>(getToken);
   }

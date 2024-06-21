@@ -1,3 +1,4 @@
+import 'package:copify/application/bloc/category_bloc/category_bloc.dart';
 import 'package:copify/application/bloc/token_bloc/token_bloc.dart';
 import 'package:copify/core/env.dart';
 import 'package:copify/core/theme/theme_data.dart';

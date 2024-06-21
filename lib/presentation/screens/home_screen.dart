@@ -48,35 +48,36 @@ class HomeScreen extends StatelessWidget {
                 );
               },
             );
-            // return SingleChildScrollView(
-            //   child: Padding(
-            //     padding: const EdgeInsets.all(8.0),
-            //     child: Column(
-            //       crossAxisAlignment: CrossAxisAlignment.start,
-            //       children: [
-            //         _buildHorizontalScrollSection("Categories", context),
-            //         const SizedBox(
-            //           height: 24,
-            //         ),
-            //         _buildHorizontalScrollSection("Album", context),
-            //         const SizedBox(
-            //           height: 24,
-            //         ),
-            //         _buildHorizontalScrollSection("Artist", context),
-            //         const SizedBox(
-            //           height: 24,
-            //         ),
-            //         _buildHorizontalScrollSection("Favorites", context),
-            //       ],
-            //     ),
-            //   ),
-            // );
           },
         ),
       ),
     );
   }
 }
+
+// return SingleChildScrollView(
+//   child: Padding(
+//     padding: const EdgeInsets.all(8.0),
+//     child: Column(
+//       crossAxisAlignment: CrossAxisAlignment.start,
+//       children: [
+//         _buildHorizontalScrollSection("Categories", context),
+//         const SizedBox(
+//           height: 24,
+//         ),
+//         _buildHorizontalScrollSection("Album", context),
+//         const SizedBox(
+//           height: 24,
+//         ),
+//         _buildHorizontalScrollSection("Artist", context),
+//         const SizedBox(
+//           height: 24,
+//         ),
+//         _buildHorizontalScrollSection("Favorites", context),
+//       ],
+//     ),
+//   ),
+// );
 
 Widget _buildHorizontalScrollSection(String title, BuildContext context) {
   // Replace this with your logic to fetch and display albums

@@ -453,6 +453,8 @@ abstract class _$$CategoryLoadedImplCopyWith<$Res> {
       __$$CategoryLoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CategoryModel categories});
+
+  $CategoryModelCopyWith<$Res> get categories;
 }
 
 /// @nodoc
@@ -466,14 +468,22 @@ class __$$CategoryLoadedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? categories = freezed,
+    Object? categories = null,
   }) {
     return _then(_$CategoryLoadedImpl(
-      freezed == categories
+      null == categories
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
               as CategoryModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CategoryModelCopyWith<$Res> get categories {
+    return $CategoryModelCopyWith<$Res>(_value.categories, (value) {
+      return _then(_value.copyWith(categories: value));
+    });
   }
 }
 
@@ -495,13 +505,12 @@ class _$CategoryLoadedImpl implements _CategoryLoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CategoryLoadedImpl &&
-            const DeepCollectionEquality()
-                .equals(other.categories, categories));
+            (identical(other.categories, categories) ||
+                other.categories == categories));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(categories));
+  int get hashCode => Object.hash(runtimeType, categories);
 
   @JsonKey(ignore: true)
   @override
